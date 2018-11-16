@@ -19,7 +19,7 @@ if [ -f /usr/sbin/ufw ]; then
 fi
 
 ## install theia-ide as user pi
-sudo -i -u pi ./theia_install.sh
+sudo -i -u pi $(pwd)/theia_install.sh
 
 ## Create and setup service
 echo [Unit] > /lib/systemd/system/theia-ide.service

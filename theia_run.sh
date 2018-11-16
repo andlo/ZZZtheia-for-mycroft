@@ -1,5 +1,9 @@
 #!/bin/bash
 cd $(dirname "$0")
+
+export LOCAL_GIT_DIRECTORY="/usr"
+export GIT_EXEC_PATH="/usr/lib/git-core"
+
 ## setup and load nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
