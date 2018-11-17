@@ -11,7 +11,7 @@ if [ -f /home/pi/mycroft-core/.venv/bin/activate ]; then
     source /home/pi/mycroft-core/.venv/bin/activate
 fi
 ## if mark_1
-if [ -f source /opt/venvs/mycroft-core/bin/activate ]; then
+if [ -f /opt/venvs/mycroft-core/bin/activate ]; then
     source /opt/venvs/mycroft-core/bin/activate
 fi
 
