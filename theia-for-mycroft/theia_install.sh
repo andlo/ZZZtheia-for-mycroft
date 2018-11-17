@@ -17,3 +17,6 @@ yarn theia build
 mycroft-pip install python-language-server
 
 cp -u $(pwd)/editorconfig $HOME/.editorconfig
+
+echo "THEIA IDE for mycroft is installed and running."
+echo "go to http://$(hostname):3000 to access the IDE"

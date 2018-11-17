@@ -5,6 +5,16 @@ cd $(dirname "$0")
 export LOCAL_GIT_DIRECTORY="/usr"
 export GIT_EXEC_PATH="/usr/lib/git-core"
 
+## enter .venv
+## If picroft
+if [ -f /home/pi/mycroft-core/.venv/bin/activate ]; then
+    source /home/pi/mycroft-core/.venv/bin/activate
+fi
+## if mark_1
+if [ -f source /opt/venvs/mycroft-core/bin/activate ]; then
+    source /opt/venvs/mycroft-core/bin/activate
+fi
+
 ## setup and load nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
