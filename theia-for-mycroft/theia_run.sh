@@ -1,6 +1,7 @@
 #!/bin/bash
 cd $(dirname "$0")
 
+## make sure git is working
 export LOCAL_GIT_DIRECTORY="/usr"
 export GIT_EXEC_PATH="/usr/lib/git-core"
 
