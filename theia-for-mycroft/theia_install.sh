@@ -16,4 +16,4 @@ yarn theia build
 
 mycroft-pip install python-language-server
 
-cp -u $(pwd)/.editorconfig /opt/mycroft/skills
+cp -u $(pwd)/editorconfig $HOME/.editorconfig
