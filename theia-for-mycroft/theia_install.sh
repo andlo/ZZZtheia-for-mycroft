@@ -2,6 +2,16 @@
 cd $(dirname "$0")
 #cd $(pwd)
 
+## enter .venv
+## If picroft
+if [ -f /home/pi/mycroft-core/.venv/bin/activate ]; then
+    source /home/pi/mycroft-core/.venv/bin/activate
+fi
+## if mark_1
+if [ -f /opt/venvs/mycroft-core/bin/activate ]; then
+    source /opt/venvs/mycroft-core/bin/activate
+fi
+
 curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
 export NVM_DIR="$HOME/.nvm"
@@ -18,5 +28,3 @@ mycroft-pip install python-language-server
 
 cp -u $(pwd)/editorconfig $HOME/.editorconfig
 
-echo "THEIA IDE for mycroft is installed and running."
-echo "go to http://$(hostname):3000 to access the IDE"

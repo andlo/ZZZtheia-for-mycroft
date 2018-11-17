@@ -35,3 +35,18 @@ chmod 644 /lib/systemd/system/theia-ide.service
 systemctl daemon-reload
 systemctl enable theia-ide.service
 systemctl start theia-ide.service
+
+## on mark_1 the version of git is to old, so need to compile and install newer one
+## if mark_1
+if [ -f /opt/venvs/mycroft-core/bin/activate ]; then
+    git clone git://git.kernel.org/pub/scm/git/git.git
+    cd git
+    make configure
+    ./configure --prefix=/usr
+    make
+    make install
+fi
+
+echo "THEIA IDE for mycroft is installed and running."
+echo "go to http://$(hostname):3000 to access the IDE"
+
