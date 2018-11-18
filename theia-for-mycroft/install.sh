@@ -47,6 +47,8 @@ if [ $(git --version |cut -d" " -f3 | cut -d"." -f1) \< 3 ]; then
         ./configure --prefix=/usr
         make
         make install
+        cd ..
+        rm -r git
     fi
 fi
 
