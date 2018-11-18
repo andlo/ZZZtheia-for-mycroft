@@ -27,7 +27,7 @@ echo Type=simple >> /lib/systemd/system/theia-ide.service
 echo ExecStart=$(pwd)/theia_run.sh >>/lib/systemd/system/theia-ide.service
 echo Restart=on-abort >>/lib/systemd/system/theia-ide.service
 echo User=pi >>/lib/systemd/system/theia-ide.service
-echo EnvironmentFile=$(pwd)/theia-ide.env >>/lib/systemd/system/theia-ide.service
+#echo EnvironmentFile=$(pwd)/theia-ide.env >>/lib/systemd/system/theia-ide.service
 echo [Install] >>/lib/systemd/system/theia-ide.service
 echo WantedBy=multi-user.target >>/lib/systemd/system/theia-ide.service
 
