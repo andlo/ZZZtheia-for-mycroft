@@ -9,6 +9,7 @@ export GIT_EXEC_PATH="/usr/lib/git-core"
 ## If picroft
 if [ -f /home/pi/mycroft-core/.venv/bin/activate ]; then
     source /home/pi/mycroft-core/.venv/bin/activate
+    export PATH="$HOME/bin:$HOME/mycroft-core/bin:$PATH"
 fi
 ## if mark_1
 if [ -f /opt/venvs/mycroft-core/bin/activate ]; then
