@@ -14,7 +14,10 @@ if [ -f /opt/venvs/mycroft-core/bin/activate ]; then
 fi
 
 echo "Installing nvm..."
-curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash >/dev/null 2>/dev/null
+#curl -o nvm_install.sh https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash >/dev/null 2>/dev/null
+curl -o nvm_install.sh https://raw.githubusercontent.com/creationix/nvm/master/install.sh >/dev/null 2>/dev/null
+chmod +x nvm_install.sh
+nvm_install.sh >/dev/null 2>/dev/null
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  >/dev/null 2>/dev/null # This loads nvm

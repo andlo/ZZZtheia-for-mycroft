@@ -1,13 +1,13 @@
 #!/bin/bash
 cd $(dirname "$0")
 
-echo
+echo "  "
 echo "Installing THEIA IDE for Mycroft"
 echo "This will take a while 15 to 30 min. depending on your hardware. So please be patient"
-
-## Check for freespace and if enough encrease swapfilse size
+echo "  "
+## Check for freespace and if enough, encrease swapfilse size
 echo "Encreasing swapsize if it is to small...."
-freespace = $(df . | awk 'NR==2{print $4/1024/1024}')
+freespace=$(df . | awk 'NR==2{print $4/1024/1024}')
 if [ ${freespace%.*} >= 4 ]; then
     sed -i -e "s/CONF_SWAPSIZE=100/CONF_SWAPSIZE=1024/" /etc/dphys-swapfile
     /etc/init.d/dphys-swapfile stop >/dev/null 2>/dev/null
@@ -17,7 +17,7 @@ fi
 # On Mark_1 the firewall needs to be opend
 if [ -f /usr/sbin/ufw ]; then
         echo "Opening port 3000 in firewall... "
-        sudo ufw allow from any to any port 3000 proto tcp
+        sudo ufw allow from any to any port 3000 proto tcp  >/dev/null 2>/dev/null
 fi
 
 ## install theia-ide as user pi
