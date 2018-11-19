@@ -8,7 +8,7 @@ echo "  "
 ## Check for freespace and if enough, encrease swapfilse size
 echo "Encreasing swapsize if it is to small...."
 freespace=$(df . | awk 'NR==2{print $4/1024/1024}')
-if [ ${freespace%.*} >= 4 ]; then
+if [ ${freespace%.*}>=4 ]; then
     sed -i -e "s/CONF_SWAPSIZE=100/CONF_SWAPSIZE=1024/" /etc/dphys-swapfile
     /etc/init.d/dphys-swapfile stop >/dev/null 2>/dev/null
     /etc/init.d/dphys-swapfile start >/dev/null 2>/dev/null
