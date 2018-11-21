@@ -16,7 +16,7 @@ if [ -f /home/pi/mycroft-core/venv-activate.sh ]; then
 fi
 
 ## setup and load nvm
-export NVM_DIR="$(pwd)/.nvm"
+export NVM_DIR="$(pwd)/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" >/dev/null 2>/dev/null # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" >/dev/null 2>/dev/null # This loads nvm bash_completion
 
