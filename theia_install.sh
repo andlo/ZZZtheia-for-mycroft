@@ -33,4 +33,4 @@ make >/dev/null 2>/dev/null
 echo "Installing git...into node_modules/dugite/git"
 make install >/dev/null 2>/dev/null
 cd ..
-
+rm -r git/ >/dev/null 2>/dev/null
