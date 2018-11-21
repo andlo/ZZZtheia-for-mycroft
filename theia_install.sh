@@ -20,24 +20,17 @@ yarn theia build
 
 echo "Building thiea OK"
 
-## on mark_1 the version of git is to old, so need to compile and install newer one
-## if mark_1
-#if [ $(git --version |cut -d" " -f3 | cut -d"." -f1) \< 3 ]; then
-#    if [ $(git --version |cut -d" " -f3 | cut -d"." -f2) \< 11 ]; then
-#        echo "A newer version og git is requered!"
-#        echo "Installing depencies..."
-#        apt-get -y install dh-autoreconf libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev >/dev/null 2>/dev/null
-#        echo "Cloning git..."
-#        git clone git://git.kernel.org/pub/scm/git/git.git >/dev/null 2>/dev/null
-#        cd git
-#        echo "Compiling git..."
-#        make configure >/dev/null 2>/dev/null
-#        #./configure --prefix=$(pwd)/git >/dev/null 2>/dev/null
-#        ./configure >/dev/null 2>/dev/null
-#        make >/dev/null 2>/dev/null
-#        # echo "Installing git..."
-#        # make install >/dev/null 2>/dev/null
-#        cd ..
-#    fi
-#fi
+echo "Building git"
+echo "Installing depencies..."
+apt-get -y install dh-autoreconf libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev >/dev/null 2>/dev/null
+echo "Cloning git..."
+git clone git://git.kernel.org/pub/scm/git/git.git >/dev/null 2>/dev/null
+cd git
+echo "Compiling git..."
+make configure >/dev/null 2>/dev/null
+./configure --prefix=$(pwd)/../node_modules/dugite/git >/dev/null 2>/dev/null
+make >/dev/null 2>/dev/null
+echo "Installing git...into node_modules/dugite/git"
+make install >/dev/null 2>/dev/null
+cd ..
 
