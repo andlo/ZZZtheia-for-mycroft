@@ -2,8 +2,8 @@
 cd $1
 
 ## make sure git is working
-export LOCAL_GIT_DIRECTORY="/usr"
-export GIT_EXEC_PATH="/usr/lib/git-core"
+#export LOCAL_GIT_DIRECTORY="/usr"
+#export GIT_EXEC_PATH="/usr/lib/git-core"
 
 ## If on Mark_1 enter venv
 if [ -f /opt/venvs/mycroft-core/bin/activate ]; then
