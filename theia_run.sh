@@ -8,6 +8,7 @@ cd $1
 ## If on Mark_1 enter venv
 if [ -f /opt/venvs/mycroft-core/bin/activate ]; then
     source /opt/venvs/mycroft-core/bin/activate
+    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
 fi
 
 ## If on picroft enter venv
