@@ -1,25 +1,25 @@
 #!/bin/bash
 cd $1
 
-## make sure git is working
-#export LOCAL_GIT_DIRECTORY="/usr"
-#export GIT_EXEC_PATH="/usr/lib/git-core"
-
 ## If on Mark_1 enter venv
 if [ -f /opt/venvs/mycroft-core/bin/activate ]; then
     source /opt/venvs/mycroft-core/bin/activate
-    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
 fi
 
 ## If on picroft enter venv
-if [ -f /home/pi/mycroft-core/venv-activate.sh ]; then
-    /home/pi/mycroft-core/venv-activate.sh
-fi
+#if [ -f /home/pi/mycroft-core/venv-activate.sh ]; then
+#    /home/pi/mycroft-core/venv-activate.sh
+#fi
 
 ## setup and load nvm
 export NVM_DIR="$(pwd)/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" >/dev/null 2>/dev/null # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" >/dev/null 2>/dev/null # This loads nvm bash_completion
 
+## make sure git is working
+export LOCAL_GIT_DIRECTORY="$(pwd)/node_modules/dugite/git"
+export GIT_EXEC_PATH="$(pwd)/node_modules/dugite/git/libexec/git-core"
+export PATH=$(pwd)/node_modules/dugite/git/bin:$(pwd)/node_modules/dugite/git/libexec/git-core:$PATH 
+
 ## run theia-ide
-yarn theia start /opt/mycroft/skills  --startup-timeout -1 --hostname 0.0.0.0 --port 3000 >/dev/null 2>/dev/null
+yarn theia start /opt/mycroft/skills  --startup-timeout -1 --hostname 0.0.0.0 --port 3000
