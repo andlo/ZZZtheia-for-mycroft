@@ -20,7 +20,12 @@
     "@theia/python": "next",
     "@theia/process": "next",
     "@theia/editorconfig" : "next",
-    "@theia/mini-browser": "next"
+    "@theia/mini-browser": "next",
+    "@theia/getting-started": "next",
+    "@theia/task": "next",
+    "@theia/textmate-grammars": "next",
+    "@theia/variable-resolver": "next",
+    "@theia/workspace": "next"
   },
   "devDependencies": {
     "@theia/cli": "next"
