@@ -8,5 +8,15 @@ The skill that installs and use THEIA IDE on a mycroft device is locatet on a no
 
 https://github.com/andlo/theia-ide-skill
 
+## Usage
+* clone the repo
+* run build_release.sh
+* run patch_dugite.sh
+* package relese dir
+
+On Rpi there is limited ram, so to compile without errors there is need for using zram.
+use https://github.com/novaspirit/rpi_zram
+
+
 ## Credits
 Andreas Lorensen (@andlo)

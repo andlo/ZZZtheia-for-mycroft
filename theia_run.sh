@@ -19,7 +19,9 @@ export NVM_DIR="$(pwd)/nvm"
 ## make sure git is working
 export LOCAL_GIT_DIRECTORY="$(pwd)/node_modules/dugite/git"
 export GIT_EXEC_PATH="$(pwd)/node_modules/dugite/git/libexec/git-core"
-export PATH=$(pwd)/node_modules/dugite/git/bin:$(pwd)/node_modules/dugite/git/libexec/git-core:$PATH 
+export PATH=$(pwd)/node_modules/dugite/git/bin:$(pwd)/node_modules/dugite/git/libexec/git-core:$PATH
 
+#set the VS code plugins dit
+export THEIA_DEFAULT_PLUGINS=local-dir://$HOME/theia-plugins
 ## run theia-ide
 yarn theia start /opt/mycroft/skills  --startup-timeout -1 --hostname 0.0.0.0 --port 3000
