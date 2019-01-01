@@ -6,6 +6,7 @@
         "@theia/navigator": "next",
         "@theia/terminal": "next",
         "@theia/outline-view": "next",
+        "@theia/preview": "next",
         "@theia/preferences": "next",
         "@theia/monaco": "next",
         "@theia/getting-started": "next",
@@ -19,8 +20,7 @@
         "@theia/plugin": "next",
         "@theia/plugin-ext": "next",
         "@theia/plugin-ext-vscode": "next",
-        "@theia/editorconfig": "next",
-        "@theia/preview": "next"
+        "@theia/editorconfig": "next"
     },
     "devDependencies": {
         "@theia/cli": "next"

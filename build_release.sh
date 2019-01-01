@@ -16,6 +16,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | ba
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  >/dev/null 2>/dev/null # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  >/dev/null 2>/dev/null # This loads nvm bash_completion
 
+export NODE_OPTIONS=--max_old_space_size=1024
 
 echo "Intstalling node..."
 nvm install 8
