@@ -16,10 +16,11 @@
         "@theia/search-in-workspace": "next",
         "@theia/json": "next",
         "@theia/editor-preview": "next",
-	 "@theia/plugin": "next",
+        "@theia/plugin": "next",
         "@theia/plugin-ext": "next",
         "@theia/plugin-ext-vscode": "next",
-	"@theia/editorconfig": "next"
+        "@theia/editorconfig": "next",
+        "@theia/preview": "next"
     },
     "devDependencies": {
         "@theia/cli": "next"
