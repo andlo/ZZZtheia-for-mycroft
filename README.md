@@ -16,6 +16,7 @@ https://github.com/andlo/theia-ide-skill
 
 On Rpi there is limited ram, so to compile without errors there is need for using zram.
 use https://github.com/novaspirit/rpi_zram
+Also stop mycroft services if they are running as they take up most of the ram.
 
 
 ## Credits
