@@ -22,10 +22,10 @@ CC='gcc' \
   --prefix=/
 
 echo "Installing git...into node_modules/dugite/git"
-rm -r -f $RELDIR/node_modules/dugite/git
-mkdir $RELDIR/node_modules/dugite/git
+rm -r -f $RELDIR/git
+mkdir $RELDIR/git
 
-DESTDIR="$RELDIR/node_modules/dugite/git" \
+DESTDIR="$RELDIR/git/git" \
     NO_PERL=1 \
     NO_TCLTK=1 \
     NO_GETTEXT=1 \
@@ -35,17 +35,16 @@ DESTDIR="$RELDIR/node_modules/dugite/git" \
 
 
 echo "-- Removing server-side programs"
-rm "$RELDIR/node_modules/dugite/git/bin/git-cvsserver"
-rm "$RELDIR/node_modules/dugite/git/bin/git-receive-pack"
-rm "$RELDIR/node_modules/dugite/git/bin/git-upload-archive"
-rm "$RELDIR/node_modules/dugite/git/bin/git-upload-pack"
-rm "$RELDIR/node_modules/dugite/git/bin/git-shell"
+rm "$RELDIR/git/git/bin/git-cvsserver"
+rm "$RELDIR/git/git/bin/git-receive-pack"
+rm "$RELDIR/git/git/bin/git-upload-archive"
+rm "$RELDIR/git/git/bin/git-upload-pack"
+rm "$RELDIR/git/dugite/git/bin/git-shell"
 
 echo "-- Removing unsupported features"
-rm "$RELDIR/node_modules/dugite/libexec/git-core/git-svn"
-rm "$RELDIR/node_modules/dugite/libexec/git-core/git-remote-testsvn"
-rm "$RELDIR/node_modules/dugite/libexec/git-core/git-p4"
+rm "$RELDIR/git/libexec/git-core/git-svn"
+rm "$RELDIR/git/libexec/git-core/git-remote-testsvn"
+rm "$RELDIR/git/libexec/git-core/git-p4"
 
-cd ..
 # rm -r git >/dev/null 2>/dev/null
 
