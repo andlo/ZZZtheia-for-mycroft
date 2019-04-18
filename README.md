@@ -11,7 +11,6 @@ https://github.com/andlo/theia-ide-skill
 ## Usage
 * clone the repo
 * run build_release.sh
-* run patch_dugite.sh
 * package relese dir
 
 On Rpi there is limited ram, so to compile without errors there is need for using zram.
