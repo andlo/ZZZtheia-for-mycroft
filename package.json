@@ -1,7 +1,6 @@
 {
     "private": true,
     "dependencies": {
-        "@theia/python": "next",
         "@theia/messages": "next",
         "@theia/navigator": "next",
         "@theia/terminal": "next",
