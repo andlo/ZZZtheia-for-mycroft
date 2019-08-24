@@ -11,17 +11,23 @@ cp package.json $RELDIR
 cd release
 
 echo "Installing nvm..."
-curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+#curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  >/dev/null 2>/dev/null # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  >/dev/null 2>/dev/null # This loads nvm bash_completion
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  >/dev/null 2>/dev/null # This loads nvm bash_completion
 
 export NODE_OPTIONS=--max_old_space_size=1024
 
-echo "Intstalling node..."
-nvm install 8
-echo "Installling yarn..."
+#echo "Intstalling node..."
+#nvm install 8
+nvm install 10
+
+#echo "Installling yarn..."
 npm install -g yarn
+
+
+
 
 echo "Building theia..."
 

@@ -1,6 +1,8 @@
 {
     "private": true,
     "dependencies": {
+        "typescript": "latest",
+        "@theia/typescript": "next",
         "@theia/messages": "next",
         "@theia/navigator": "next",
         "@theia/terminal": "next",
@@ -19,7 +21,13 @@
         "@theia/plugin": "next",
         "@theia/plugin-ext": "next",
         "@theia/plugin-ext-vscode": "next",
-        "@theia/editorconfig": "next"
+        "@theia/editorconfig": "next",
+        "@theia/callhierarchy": "next",
+        "@theia/merge-conflicts": "next",
+        "@theia/json": "next",
+        "@theia/mini-browser": "next",
+        "theia-cpp-branding": "file:../theia-cpp-branding/cpp-branding",
+        "mycroft": "../theia-ext-mycroft/mycroft"
     },
     "devDependencies": {
         "@theia/cli": "next"
