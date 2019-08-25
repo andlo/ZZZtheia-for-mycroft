@@ -46,8 +46,9 @@ cd ..
 echo "Packing theia...."
 rm -rf $NVM_DIR
 cd $RELDIR
-tar -czvf theiaide-picroft.tgz *
-mv tar -czvf theia-mycroft-$(uname -m)-$(date +%Y%m%d).tgz ..
+FILENAME = theia-mycroft-$(uname -m)-$(date +%Y%m%d).tgz
+tar -czvf $FILENAME *
+mv $FILENAME ..
 cd ..
 rm -rf $RELDIR
 echo "Building theia...OK"
