@@ -7,7 +7,14 @@ if [ -f /opt/venvs/mycroft-core/bin/activate ]; then
 fi
 
 ## setup and load nvm
+
 export NVM_DIR="$(pwd)/nvm"
+
+# install nvm if not alreddy present
+if [ ! -d $NVM_DIR ]; then
+    curl -s -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash >/dev/null 2>/dev/null
+fi
+
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" >/dev/null 2>/dev/null # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" >/dev/null 2>/dev/null # This loads nvm bash_completion
 
