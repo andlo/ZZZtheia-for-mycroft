@@ -1,5 +1,5 @@
 #!/bin/bash
-export NVM_DIR=$(pwd)/nvm"
+export NVM_DIR=$(pwd)/nvm
 mkdir $NVM_DIR
 
 echo "Installing nvm..."
