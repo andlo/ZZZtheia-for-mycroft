@@ -27,7 +27,7 @@
         "@theia/plugin-ext": "latest",
         "@theia/plugin-ext-vscode": "latest",
  	"@theia/preview": "latest",
-  	"@theia/getting-started": "latest",
+  	"@theia/getting-started": "latest"
     },
     "resolutions": {
         "vscode-languageserver-protocol": "3.15.0-next.9",
