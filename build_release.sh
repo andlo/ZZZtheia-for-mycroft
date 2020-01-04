@@ -1,14 +1,6 @@
 #!/bin/bash
-RELDIR="$(pwd)/release"
-mkdir release
-
-export NVM_DIR="$RELDIR/nvm"
+export NVM_DIR=$(pwd)/nvm"
 mkdir $NVM_DIR
-
-cp theia_run.sh $RELDIR
-cp package.json $RELDIR
-
-cd release
 
 echo "Installing nvm..."
 curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
@@ -19,7 +11,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | ba
 export NODE_OPTIONS=--max_old_space_size=1024
 
 echo "Intstalling node..."
-nvm install 8
+nvm install 10
 echo "Installling yarn..."
 npm install -g yarn
 

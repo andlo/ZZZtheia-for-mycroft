@@ -1,27 +1,41 @@
 {
     "private": true,
+    "theia": {
+        "frontend": {
+            "config": {
+                "applicationName": "Theia for Mycroft",
+                "preferences": {
+                    "files.enableTrash": true
+                }
+            }
+        }
+    },
     "dependencies": {
-        "@theia/messages": "next",
-        "@theia/navigator": "next",
-        "@theia/terminal": "next",
-        "@theia/outline-view": "next",
-        "@theia/preview": "next",
-        "@theia/preferences": "next",
-        "@theia/monaco": "next",
-        "@theia/getting-started": "next",
-        "@theia/git": "next",
-        "@theia/file-search": "next",
-        "@theia/markers": "next",
-        "@theia/textmate-grammars": "next",
-        "@theia/search-in-workspace": "next",
-        "@theia/json": "next",
-        "@theia/editor-preview": "next",
-        "@theia/plugin": "next",
-        "@theia/plugin-ext": "next",
-        "@theia/plugin-ext-vscode": "next",
-        "@theia/editorconfig": "next"
+        "@theia/file-search": "latest",
+        "@theia/git": "latest",
+        "@theia/json": "latest",
+        "@theia/markers": "latest",
+        "@theia/messages": "latest",
+        "@theia/navigator": "latest",
+        "@theia/outline-view": "latest",
+        "@theia/preferences": "latest",
+        "@theia/python": "latest",
+        "@theia/search-in-workspace": "latest",
+        "@theia/terminal": "latest",
+        "@theia/textmate-grammars": "latest",
+        "@theia/plugin": "latest",
+        "@theia/plugin-ext": "latest",
+        "@theia/plugin-ext-vscode": "latest",
+ 	"@theia/preview": "latest",
+  	"@theia/getting-started": "latest",
+    },
+    "resolutions": {
+        "vscode-languageserver-protocol": "3.15.0-next.9",
+        "vscode-languageserver-types": "3.15.0-next.5",
+        "**/vscode-json-languageserver/**/vscode-languageserver": "6.0.0-next.1"
     },
     "devDependencies": {
-        "@theia/cli": "next"
+        "@theia/cli": "latest"
     }
 }
+

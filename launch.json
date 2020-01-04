@@ -9,10 +9,10 @@
     "type": "python",
     "request": "attach",
     "port": "5678",
+    "debugserver": "5678"
     "host": "localhost",
     "redirectOutput": true,
-    "subProcess": true,
-},
+    "subProcess": true,},
 {
     "name": "Python: Current File",
     "type": "python",
