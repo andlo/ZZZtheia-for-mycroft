@@ -19,4 +19,4 @@ fi
 export THEIA_DEFAULT_PLUGINS=local-dir://$(pwd)/vscode-plugins
 
 ## run theia-ide
-yarn theia start $workspace --startup-timeout -1 --hostname 0.0.0.0 --port 3000
+yarn theia start $workspace --startup-timeout -1 --hostname 0.0.0.0 --port 3000 >/dev/null 2>/dev/null
