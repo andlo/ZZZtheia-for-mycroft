@@ -9,9 +9,10 @@
     "type": "python",
     "request": "attach",
     "port": "5678",
-    "debugserver": "5678"
+    "debugServer": "5678",
     "host": "localhost",
     "redirectOutput": true
+},
 {
     "name": "Python: Current File",
     "type": "python",
@@ -19,9 +20,6 @@
     "program": "${file}",
     "console": "IntegratedTerminal"
 },
-{"type": "python"}
-  ]
-}
 {
   "configurationAttributes": {
     "launch": {
