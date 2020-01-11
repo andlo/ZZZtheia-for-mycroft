@@ -1,12 +1,16 @@
 #!/bin/bash
 
 ## setup and load nvm
-#export NVM_DIR="$(pwd)/nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" >/dev/null 2>/dev/null # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" >/dev/null 2>/dev/null # This loads nvm bash_completion
+export NVM_DIR="$(pwd)/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" >/dev/null 2>/dev/null # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" >/dev/null 2>/dev/null # This loads nvm bash_completion
 
-if ![ -f $1/.theia/launch.json ]; then
-    cp launch.json $(pwd)/.theia/
+if ! [ -f $1.theia/ ]; then
+    mkdir  $1.theia/
+fi
+
+if ! [ -f $1.theia/launch.json ]; then
+    cp $(pwd)/launch.json $1.theia/
 fi
 
 ## set the VS code plugins dir
