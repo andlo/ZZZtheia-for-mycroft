@@ -10,7 +10,7 @@ if ! [ -f $1.theia/ ]; then
 fi
 
 if ! [ -f $1.theia/launch.json ]; then
-    cp $(pwd)/launch.json $1.theia/
+    cp $(pwd)/launch.json $1/.theia/
 fi
 
 ## set the VS code plugins dir
