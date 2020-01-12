@@ -35,6 +35,9 @@ yarn cache clean
 mkdir vscode-plugins
 cd vscode-plugins
 wget https://github.com/$(wget https://github.com/Microsoft/vscode-python/releases/latest -O- | egrep '/.*/.*/.*vsix' -o)
+wget https://github.com/$(wget https://github.com/redhat-developer/vscode-yaml/releases/latest -O- | egrep '/.*/.*/.*vsix' -o)
+
+
 cd ..
 
 cd ..
