@@ -24,8 +24,8 @@ echo *.ts >> .yarnclean
 echo *.ts.map >> .yarnclean
 echo *.spec.* >> .yarnclean
 yarn autoclean --force
-rm -rf ./node_modules/electron
-rm -rd nvm/.cache/
+rm -rf ./node_modules/electron*
+rm -rf nvm/.cache/
 yarn cache clean
 
 echo "Building theia...OK"
