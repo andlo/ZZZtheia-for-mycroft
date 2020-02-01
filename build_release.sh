@@ -2,6 +2,16 @@
 export NVM_DIR=$(pwd)/nvm
 mkdir $NVM_DIR
 
+echo "Cleaning up..."
+rm en-webpack.config.js
+rm webpack.config.js
+rm yarn.lock
+rm -rf lib
+rm -rf node_modules
+rm -rf nvm
+rm -rf plugins
+rm -rf src-gen
+
 echo "Installing nvm..."
 curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
