@@ -8,8 +8,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | ba
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  >/dev/null 2>/dev/null # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  >/dev/null 2>/dev/null # This loads nvm bash_completion
 
-#if [ $1 == "picroft" ] ; then
-#    export NODE_OPTIONS=--max_old_space_size=1024
+export NODE_OPTIONS=--max_old_space_size=4096
 
 echo "Intstalling node..."
 nvm install 10
@@ -19,9 +18,7 @@ npm install -g yarn
 echo "Building theia..."
 
 yarn
-#yarn --pure-lockfile
 yarn theia build
-#yarn --production
 yarn autoclean --init
 echo *.ts >> .yarnclean
 echo *.ts.map >> .yarnclean
@@ -31,14 +28,4 @@ rm -rf ./node_modules/electron
 rm -rd nvm/.cache/
 yarn cache clean
 
-# instll vscode python plugin
-mkdir vscode-plugins
-cd vscode-plugins
-wget https://github.com/$(wget https://github.com/Microsoft/vscode-python/releases/latest -O- | egrep '/.*/.*/.*vsix' -o)
-wget https://github.com/$(wget https://github.com/redhat-developer/vscode-yaml/releases/latest -O- | egrep '/.*/.*/.*vsix' -o)
-
-
-cd ..
-
-cd ..
 echo "Building theia...OK"
