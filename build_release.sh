@@ -1,6 +1,5 @@
 #!/bin/bash
 export NVM_DIR=$(pwd)/nvm
-mkdir $NVM_DIR
 
 echo "Cleaning up..."
 rm gen-webpack.config.js
@@ -14,6 +13,7 @@ rm -rf src-gen
 rm .yarnclean
 
 echo "Installing nvm..."
+mkdir $NVM_DIR
 curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  >/dev/null 2>/dev/null # This loads nvm
