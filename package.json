@@ -75,3 +75,4 @@
         "vscode-builtin-yaml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/yaml-1.39.1-prel.vsix",
         "vscode-python": "https://github.com/microsoft/vscode-python/releases/download/2020.1.57204/ms-python-release.vsix"
     }
+}
