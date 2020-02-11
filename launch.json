@@ -5,13 +5,11 @@
   "configurations": [
 
 {
-    "name": "Python: Mycroft",
+    "name": "Python: Attach",
     "type": "python",
     "request": "attach",
-    "port": "5678",
-    "debugServer": "5678",
-    "host": "localhost",
-    "redirectOutput": true
+    "port": 5678,
+    "host": "localhost"
 },
 {
     "name": "Python: Current File",

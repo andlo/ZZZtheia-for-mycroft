@@ -16,7 +16,7 @@ if ! [ -f $workspace/.theia/launch.json ]; then
 fi
 
 ## set the VS code plugins dir
-export THEIA_DEFAULT_PLUGINS=local-dir://$(pwd)/vscode-plugins
+export THEIA_DEFAULT_PLUGINS=local-dir://$(pwd)/plugins
 
 ## run theia-ide
 yarn theia start $workspace --startup-timeout -1 --hostname 0.0.0.0 --port 3000 >/dev/null 2>/dev/null

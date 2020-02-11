@@ -1,2 +1,12 @@
 /release
 /git
+/lib
+/node_modules
+/plugins
+/src-gen
+/nvm
+.yarnclean
+gen-webpack.config.js
+webpack.config.js
+yarn.lock
+/.theia

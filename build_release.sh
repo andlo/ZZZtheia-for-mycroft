@@ -1,15 +1,27 @@
 #!/bin/bash
 export NVM_DIR=$(pwd)/nvm
-mkdir $NVM_DIR
+
+echo "Cleaning up..."
+rm gen-webpack.config.js
+rm webpack.config.js
+rm yarn.lock
+rm -rf lib
+rm -rf node_modules
+rm -rf nvm
+rm -rf plugins
+rm -rf src-gen
+rm .yarnclean
 
 echo "Installing nvm..."
+mkdir $NVM_DIR
 curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  >/dev/null 2>/dev/null # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  >/dev/null 2>/dev/null # This loads nvm bash_completion
 
-#if [ $1 == "picroft" ] ; then
-#    export NODE_OPTIONS=--max_old_space_size=1024
+mkdir $(pwd)/plugins
+export NODE_OPTIONS=--max_old_space_size=4096
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
 echo "Intstalling node..."
 nvm install 10
@@ -19,26 +31,14 @@ npm install -g yarn
 echo "Building theia..."
 
 yarn
-#yarn --pure-lockfile
 yarn theia build
-#yarn --production
 yarn autoclean --init
 echo *.ts >> .yarnclean
 echo *.ts.map >> .yarnclean
 echo *.spec.* >> .yarnclean
 yarn autoclean --force
-rm -rf ./node_modules/electron
-rm -rd nvm/.cache/
+rm -rf ./node_modules/electron*
+rm -rf nvm/.cache/
 yarn cache clean
 
-# instll vscode python plugin
-mkdir vscode-plugins
-cd vscode-plugins
-wget https://github.com/$(wget https://github.com/Microsoft/vscode-python/releases/latest -O- | egrep '/.*/.*/.*vsix' -o)
-wget https://github.com/$(wget https://github.com/redhat-developer/vscode-yaml/releases/latest -O- | egrep '/.*/.*/.*vsix' -o)
-
-
-cd ..
-
-cd ..
 echo "Building theia...OK"
