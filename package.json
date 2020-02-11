@@ -39,7 +39,6 @@
         "@theia/search-in-workspace": "latest",
         "@theia/task": "latest",
         "@theia/terminal": "latest",
-        "@theia/userstorage": "latest",
         "@theia/variable-resolver": "latest",
         "@theia/workspace": "latest",
         "@theia/getting-started": "latest"
@@ -57,11 +56,6 @@
     },
     "adapterDir": "plugins",
     "adapters": {
-        "vscode-builtin-handlebars": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/handlebars-1.39.1-prel.vsix",
-        "vscode-builtin-json": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/json-1.39.1-prel.vsix",
-        "vscode-builtin-json-language-features": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/json-language-features-1.39.1-prel.vsix",
-        "vscode-builtin-less": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/less-1.39.1-prel.vsix",
-        "vscode-builtin-log": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/log-1.39.1-prel.vsix",
         "vscode-builtin-markdown": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/markdown-1.39.1-prel.vsix",
         "vscode-builtin-markdown-language-features": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/markdown-language-features-1.39.1-prel.vsix",
         "vscode-builtin-python": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/python-1.39.1-prel.vsix",
@@ -81,4 +75,3 @@
         "vscode-builtin-yaml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/yaml-1.39.1-prel.vsix",
         "vscode-python": "https://github.com/microsoft/vscode-python/releases/download/2020.1.57204/ms-python-release.vsix"
     }
-}
